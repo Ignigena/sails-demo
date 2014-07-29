@@ -10,9 +10,19 @@ module.exports = {
 
   attributes: {
   	
-  	/* e.g.
-  	nickname: 'string'
-  	*/
+  	name: {
+      type: 'string'
+    },
+
+    priority: {
+      type: 'integer',
+      defaultsTo: '5'
+    },
+
+    done: {
+      type: 'boolean',
+      defaultsTo: false
+    }
     
   }
 
