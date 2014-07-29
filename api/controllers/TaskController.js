@@ -17,7 +17,15 @@
 
 module.exports = {
     
-  
+  list: function (req, res) {
+    Task.find().sort('priority desc').exec(function foundTasks(err, tasks) {
+      if (err) return next(err);
+
+      res.view({
+        tasks: tasks
+      });
+    });
+  },
 
 
   /**
