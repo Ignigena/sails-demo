@@ -1,6 +1,6 @@
 <div ng-controller="AppController" class="ng-cloak">
   <h1>My Awesome To-Do List!</h1>
   <ul>
-      <li ng-repeat="todo in todos | orderBy:'priority':reverse">{{ todo.name }}</li>
+      <li ng-repeat="todo in todos | orderBy:'priority':reverse"><input type="checkbox" ng-click="toggleCompleted(todo)" ng-model="todo.done" /> {{ todo.name }}</li>
   </ul>
 </div>

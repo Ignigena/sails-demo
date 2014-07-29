@@ -42,4 +42,9 @@ app.controller('AppController', function AppController($scope, sailsSocket, $log
     }
   });
 
+  $scope.toggleCompleted = function(todo) {
+    todo.done = !todo.done;
+    sailsSocket.put('/task/' + todo.id, todo);
+  };
+
 });
